@@ -1,0 +1,7 @@
+kido\arms\JakartaRestConfiguration.class
+kido\arms\entities\GuestEntity.class
+kido\arms\resources\JakartaEE11Resource.class
+kido\arms\entities\SupplyEntity.class
+kido\arms\model\LoginModel.class
+kido\arms\entities\GuestSupplyEntity.class
+kido\arms\entities\UserEntity.class
