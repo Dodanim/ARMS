@@ -1,3 +1,4 @@
+C:\Users\kttim\Documents\NetBeansProjects\ARMs\src\main\java\kido\arms\controller\LoginController.java
 C:\Users\kttim\Documents\NetBeansProjects\ARMs\src\main\java\kido\arms\entities\GuestEntity.java
 C:\Users\kttim\Documents\NetBeansProjects\ARMs\src\main\java\kido\arms\entities\GuestSupplyEntity.java
 C:\Users\kttim\Documents\NetBeansProjects\ARMs\src\main\java\kido\arms\entities\SupplyEntity.java
@@ -5,3 +6,4 @@ C:\Users\kttim\Documents\NetBeansProjects\ARMs\src\main\java\kido\arms\entities\
 C:\Users\kttim\Documents\NetBeansProjects\ARMs\src\main\java\kido\arms\JakartaRestConfiguration.java
 C:\Users\kttim\Documents\NetBeansProjects\ARMs\src\main\java\kido\arms\model\LoginModel.java
 C:\Users\kttim\Documents\NetBeansProjects\ARMs\src\main\java\kido\arms\resources\JakartaEE11Resource.java
+C:\Users\kttim\Documents\NetBeansProjects\ARMs\src\main\java\kido\arms\services\UserService.java
