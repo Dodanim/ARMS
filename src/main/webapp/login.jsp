@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,24 +14,36 @@
         <title>Breaffy Welcome Center</title>
     </head>
     <body>
-        <h1>Breaffy Welcome Center!</h1>
+        <div class="container mt-5">
+            <h1>Breaffy Welcome Center!</h1>
+        </div>
         <!-- login.jsp -->
- <div class="container mt-5">
-        <h2 class="text-center">Login</h2>
-        <form action="login" method="post" class="mt-4">
-            <div class="mb-3">
-                <label for="username" class="form-label">User:</label>
-                <input type="text" class="form-control" id="username" name="username" required>
-            </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password:</label>
-                <input type="password" class="form-control" id="password" name="password" required>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Log in</button>
-        </form>
-    </div>
+        <div class="container mt-5">
+            <h2 class="text-center">Login</h2>
+            <form action="login" method="post" class="mt-4">
+                <div class="mb-3">
+                    <label for="username" class="form-label">User:</label>
+                    <input type="text" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary w-100">Log in</button>
+                </div>
+                <c:if test="${not empty error}">
+                    <div style="color: red;">
+                        <c:out value="${error}"/>
+                    </div>
+                </c:if>
 
-    <!-- Bootstrap JS -->
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    </body>
+                <p>${mensaje}</p>
+        </div>
+    </form>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

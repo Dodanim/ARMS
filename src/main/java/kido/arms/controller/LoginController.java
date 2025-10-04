@@ -32,20 +32,26 @@ public class LoginController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //catch the user credential by post method
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        //verify the credential and if they exist, fill the model
-        LoginModel loginModel = new LoginModel(username, password);
-        UserEntity user = userService.authenticate(loginModel);
-        if (user != null) {
-            request.getSession().setAttribute("logedInUser", user);
-            response.sendRedirect("dashboard.jsp");
-        } else {
-            // Error en login → devolver con mensaje
-        request.setAttribute("Error", "Error, Invalid credentials, please try again");
-        request.getRequestDispatcher("login.jsp").forward(request, response);
-        }
+        try {
+            //catch the user credential by post method
+            String username = request.getParameter("username");
+            String password = request.getParameter("password");
+            //verify the credential and if they exist, fill the model
+            LoginModel loginModel = new LoginModel(username, password);
+            UserEntity user = userService.authenticate(loginModel);
+            if (user != null) {
+                request.getSession().setAttribute("logedInUser", user);
+                response.sendRedirect("dashboard.jsp");
+            } else {
+                // Error en login → devolver con mensaje
+                request.setAttribute("Error", "Error, Invalid credentials, please try again");
+                request.getRequestDispatcher("login.jsp").forward(request, response);
+            }
 
+        } catch (Exception e) {
+            e.printStackTrace(); // log real en producción
+            request.setAttribute("Error", "Internal error, please contact support");
+            request.getRequestDispatcher("error.jsp").forward(request, response);
+        }
     }
 }
