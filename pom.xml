@@ -23,6 +23,12 @@
             <artifactId>jakarta.persistence-api</artifactId>
             <version>3.1.0</version>
         </dependency>-->
+<!--        Belive it or not, I should add this spring-webmvc dependency for using jSTL-->
+          <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>6.1.5</version> <!-- o cualquier versión 6.x estable -->
+    </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
@@ -76,16 +82,26 @@
             <version>5.3.31</version>
             <type>pom</type>
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>jakarta.servlet.jsp.jstl</groupId>
             <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
             <version>1.2.7</version>
-        </dependency>
-        <dependency>
+        </dependency>-->
+<!--        <dependency>
             <groupId>org.glassfish.web</groupId>
             <artifactId>jakarta.servlet.jsp.jstl</artifactId>
             <version>1.2.6</version>
-        </dependency>
+        </dependency>-->
+         <dependency>
+        <groupId>jakarta.servlet.jsp.jstl</groupId>
+        <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+        <version>3.0.1</version>
+    </dependency>
+        <dependency>
+        <groupId>org.glassfish.web</groupId>
+        <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+        <version>3.0.1</version>
+    </dependency>
         <dependency>
             <groupId>com.liferay</groupId>
             <artifactId>jakarta.ws.rs</artifactId>
@@ -95,14 +111,13 @@
     </dependencies>
     
     <build>
-        <plugins>
+       <!-- <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.12.1</version>
+                <version>3.14.0</version>
                 <configuration>
-                    <source>17</source>
-                    <target>17</target>
+                    <release>17</release>
                 </configuration>
             </plugin>
             <plugin>
@@ -111,5 +126,28 @@
                 <version>3.4.0</version>
             </plugin>
         </plugins>
+    -->
+    <plugins>
+        <!-- Compilador -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.14.0</version>
+            <configuration>
+                <release>17</release>
+            </configuration>
+        </plugin>
+
+        <!-- WAR plugin con dependencias incluidas -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.4.0</version>
+            <configuration>
+                <failOnMissingWebXml>false</failOnMissingWebXml>
+                <includeDependencyJars>true</includeDependencyJars>
+            </configuration>
+        </plugin>
+    </plugins>
     </build>
 </project>

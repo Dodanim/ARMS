@@ -44,13 +44,13 @@ public class LoginController extends HttpServlet {
                 response.sendRedirect("dashboard.jsp");
             } else {
                 // Error en login → devolver con mensaje
-                request.setAttribute("Error", "Error, Invalid credentials, please try again");
+                request.setAttribute("error", "Error, Invalid credentials, please try again");
                 request.getRequestDispatcher("login.jsp").forward(request, response);
             }
 
         } catch (Exception e) {
             e.printStackTrace(); // log real en producción
-            request.setAttribute("Error", "Internal error, please contact support");
+            request.setAttribute("error", "Error, Internal error, please contact support");
             request.getRequestDispatcher("error.jsp").forward(request, response);
         }
     }

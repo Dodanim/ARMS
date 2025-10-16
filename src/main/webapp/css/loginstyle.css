@@ -1,0 +1,18 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Oct 5, 2025, 9:39:17 PM
+    Author     : kttim
+*/
+
+#formBox{
+    max-width: 400px;
+}
+#imgUser{
+    width: 200px; 
+    height: 150px; 
+    display: block; 
+    margin: auto; 
+}

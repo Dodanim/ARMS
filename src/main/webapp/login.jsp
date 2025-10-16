@@ -10,17 +10,24 @@
 <html>
     <head>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/loginstyle.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Breaffy Welcome Center</title>
     </head>
     <body>
-        <div class="container mt-5">
-            <h1>Breaffy Welcome Center!</h1>
-        </div>
+
         <!-- login.jsp -->
-        <div class="container mt-5">
-            <h2 class="text-center">Login</h2>
-            <form action="login" method="post" class="mt-4">
+        <div id="formBox" class="container mt-5" style="">
+            <div class="mb-3"> 
+                <h2 class="text-center">Login</h2> 
+            </div>
+            <div class="mb-3">
+                <img id="imgUser" src="bootstrap/img/user-icon.png" class="rounded-pill img-thumbnail" 
+                      alt="user icon">
+            </div>
+            <form id="loginForm" action="login" method="post" class="mt-4">
+
+
                 <div class="mb-3">
                     <label for="username" class="form-label">User:</label>
                     <input type="text" class="form-control" id="username" name="username" required>
@@ -33,17 +40,18 @@
                     <button type="submit" class="btn btn-primary w-100">Log in</button>
                 </div>
                 <c:if test="${not empty error}">
-                    <div style="color: red;">
+                    <div class="alert alert-danger">
                         <c:out value="${error}"/>
                     </div>
                 </c:if>
 
                 <p>${mensaje}</p>
-        </div>
-    </form>
-</div>
 
-<!-- Bootstrap JS -->
-<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
