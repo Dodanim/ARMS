@@ -26,14 +26,18 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#">Items Record</a><%-- All--%>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Residents</a><%-- Admin only--%>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#">Inventory</a><%-- Manager and admin only--%>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown"><%-- Admin only--%>
+
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
+                                Users
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
@@ -43,7 +47,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a><%-- All--%>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -52,57 +56,105 @@
                     </form>
                 </div>
             </div>
-        </nav>
+        </nav><br>
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-body">
 
-        <form>
-            
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <label for="exampleInputEmail1" class="form-label">Item:</label>
-                        <select class="form-control" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select></div>
-                    <div class="col">
-                        <label for="exampleInputPassword1" class="form-label">Room number:</label>
-                        <select class="form-control" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">1004</option>
-                            <option value="2">1005</option>
-                            <option value="3">1006</option>
-                        </select></div>
-                    <div class="col">
-                        <label for="exampleInputPassword1" class="form-label">Guest:</label>
-                        <select class="form-control" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">Susan Duffy</option>
-                            <option value="2">Mariam O'Conner</option>
-                            <option value="3">Gift Galicia</option>
-                        </select></div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <label for="exampleFormControlInput1" class="form-label">Quantity:</label>
-                        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="0-3"> </div>
-                    <div class="col">
-                        <label for="exampleFormControlInput1" class="form-label">Date and Time:</label>
-                        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="0-3" disabled readonly> </div>
-                    <div class="col">
-                        <label for="exampleFormControlInput1" class="form-label">User:</label>
-                        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="0-3" disabled readonly> </div>
+                    <h3>New item requested</h3>
+                    <form>
 
 
-                </div>
-                <div class="row">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </div> 
-           
+                        <div class="row">
+                            <div class="col">
+                                <label for="exampleInputEmail1" class="form-label">Item:</label>
+                                <select class="form-control" aria-label="Default select example">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select></div>
+                            <div class="col">
+                                <label for="exampleInputPassword1" class="form-label">Room number:</label>
+                                <select class="form-control" aria-label="Default select example">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">1004</option>
+                                    <option value="2">1005</option>
+                                    <option value="3">1006</option>
+                                </select></div>
+                            <div class="col">
+                                <label for="exampleInputPassword1" class="form-label">Guest:</label>
+                                <select class="form-control" aria-label="Default select example">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">Susan Duffy</option>
+                                    <option value="2">Mariam O'Conner</option>
+                                    <option value="3">Gift Galicia</option>
+                                </select></div>
 
-        </form>
- <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="exampleFormControlInput1" class="form-label">Quantity:</label>
+                                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="0-3"> </div>
+                            <div class="col">
+                                <label for="exampleFormControlInput1" class="form-label">Date and Time:</label>
+                                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="0-3" disabled readonly> </div>
+
+
+                            <div class="col">
+                                <br>
+                                <button type="submit" class="btn btn-primary">Add</button>
+                            </div>
+                        </div>
+
+
+                    </form>
+                    <br></div>
+            </div>
+            <br>
+        </div> 
+
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-body">
+                    <br>
+                    <h3>Total items brought: <span class="badge badge-secondary">12</span></h3>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Item</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Guest</th>
+                                <th scope="col">User</th>
+                                <th scope="col">Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                <td>@mdo</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>  </div>  </div>
+        <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
