@@ -8,17 +8,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css?v=5.1.3">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Supply</title>
     </head>
     <body>
-
+      
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#">Company Name</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -28,18 +28,19 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#">Supplies</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
+                            <div class="dropdown me-1">
+                                <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+                                    Administration
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link disabled">Disabled</a>
@@ -66,9 +67,9 @@
                                 <label for="exampleInputEmail1" class="form-label">Item:</label>
                                 <select class="form-control" aria-label="Default select example">
                                     <option selected>Open this select menu</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <option value="1">Nappies number 8</option>
+                                    <option value="2">Baby Wipes</option>
+                                    <option value="3">Tooth Paste</option>
                                 </select></div>
                             <div class="col">
                                 <label for="exampleInputPassword1" class="form-label">Room number:</label>
@@ -114,7 +115,7 @@
             <div class="card">
                 <div class="card-body">
                     <br>
-                    <h3>Total items brought: <span class="badge badge-secondary">12</span></h3>
+                    <h3>Total items brought: <span class="badge bg-secondary">12</span></h3>
                     <table class="table table-hover">
                         <thead>
                             <tr>
@@ -127,31 +128,32 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>@mdo</td>
+                                <th scope="row">Nappies N 8</th>
+                                <td>1</td>
+                                <td>1004</td>
+                                <td>Tom</td>
+                                <td> 14-01-2026</td>
                             </tr>
                             <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                <td>@mdo</td>
+                                <th scope="row">Wipes</th>
+                                <td>2</td>
+                                <td>2020</td>
+                                <td>Khali</td>
+                                <td>12-12-2025</td>
                             </tr>
                             <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                                <td>@mdo</td>
+                                <th scope="row">Tooth Brush</th>
+                                <td>1</td>
+                                <td>2030</td>
+                                <td>Admin</td>
+                                <td>31-12-2025</td>
                             </tr>
 
                         </tbody>
                     </table>
                 </div>  </div>  </div>
-       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+        
+        <script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.bundle.min.js?v=5.1.3"></script>
+
     </body>
 </html>
