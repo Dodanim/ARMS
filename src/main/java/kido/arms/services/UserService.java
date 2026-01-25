@@ -22,7 +22,7 @@ public class UserService {
         //BreaffyPU is the persistence file.xml
         // this.emf = Persistence.createEntityManagerFactory("BreaffyPU");
     }
-
+    
     public UserEntity authenticate(LoginModel loginModel) {
         // EntityManager em = emf.createEntityManager();
         try {
@@ -35,19 +35,19 @@ public class UserService {
 //            
 //           // return query.getResultStream().findFirst().orElse(null);
             UserEntity improvisar = new UserEntity();
-
+            improvisar.setUserID((long)123456);
             improvisar.setUserName("admin");
             improvisar.setUserNameShowed("Petrona Petrolina");
             improvisar.setUserPassword("123");
             improvisar.setAccessLevel(2);
-
+            
             if (loginModel.getUserName().equals(improvisar.getUserName())
                     && loginModel.getPassword().equals(improvisar.getUserPassword())) {
                 return improvisar;
             } else {
                 return null;
             }
-
+            
         } finally {
 //            em.close();
         }

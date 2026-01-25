@@ -41,7 +41,7 @@ public class LoginController extends HttpServlet {
             UserEntity user = userService.authenticate(loginModel);
             if (user != null) {
                 request.getSession().setAttribute("logedInUser", user);
-                response.sendRedirect("dashboard.jsp");
+                response.sendRedirect(request.getContextPath() + "/dashboard");
             } else {
                 // Error en login → devolver con mensaje
                 request.setAttribute("error", "Error, Invalid credentials, please try again");
