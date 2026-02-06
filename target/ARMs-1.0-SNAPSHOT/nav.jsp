@@ -23,7 +23,7 @@
             <ul class="navbar-nav">
                 <c:forEach items="${menu}" var="item">
                     <li class="nav-item">
-                        <a class="nav-link active" href="${item.url}">
+                        <a class="nav-link active" href="${pageContext.request.contextPath}${item.url}">
                             ${item.label}
                         </a>
                     </li>

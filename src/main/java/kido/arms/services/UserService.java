@@ -39,7 +39,7 @@ public class UserService {
             improvisar.setUserName("admin");
             improvisar.setUserNameShowed("Petrona Petrolina");
             improvisar.setUserPassword("123");
-            improvisar.setAccessLevel(2);
+            improvisar.setAccessLevel(1);
             
             if (loginModel.getUserName().equals(improvisar.getUserName())
                     && loginModel.getPassword().equals(improvisar.getUserPassword())) {

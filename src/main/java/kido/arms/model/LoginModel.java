@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package kido.arms.model;
-import kido.arms.entities.UserEntity;
 /**
  *
  * @author kttim

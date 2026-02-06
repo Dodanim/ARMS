@@ -22,7 +22,10 @@ public class MenuService {
 
         if (accessLevel == 1) {
             menu.add(new MenuItemModel("Users", "/users", List.of(Integer.toString(1))));
-            menu.add(new MenuItemModel("Reports", "/users", List.of(Integer.toString(1))));
+            menu.add(new MenuItemModel("Reports", "/reports", List.of(Integer.toString(1))));
+            menu.add(new MenuItemModel("Dashboard", "/dashboard", List.of(Integer.toString(1))));
+            menu.add(new MenuItemModel("Inventory", "/inventory", List.of(Integer.toString(1))));
+            menu.add(new MenuItemModel("Profile", "/profile", List.of(Integer.toString(1))));
         }
 
         if (accessLevel == 2) {

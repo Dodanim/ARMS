@@ -3,6 +3,7 @@ kido\arms\resources\JakartaEE11Resource.class
 kido\arms\entities\GuestSupplyEntity.class
 kido\arms\filter\MenuFilter.class
 kido\arms\JakartaRestConfiguration.class
+Inventory\InventoryController.class
 kido\arms\entities\GuestEntity.class
 kido\arms\entities\SupplyEntity.class
 kido\arms\controller\LoginController.class
